@@ -1,10 +1,11 @@
 # #100DaysOfCode Log - Round 1 - [Your Name Here]
 
-The log of my #100DaysOfCode challenge. Started on [July 17, Monday, 2017].
+The log of my #100DaysOfCode challenge. Started on [June 14, Thursday, 2018].
 
 ## Log
 
 ### R1D1 
-Started a Weather App. Worked on the draft layout of the app, struggled with OpenWeather API http://www.example.com
+Retooling FreGlut to make a Tetris clone. Currently understanding the framework to see what's possible and what's not.
+I chose FreeGlut for i have experience in it during my Final in CS30 and I want to use an engine that forced me to do things from scratch.
 
 ### R1D2
