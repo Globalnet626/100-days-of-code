@@ -89,6 +89,7 @@ void GameController::initDrawersAndSounds()
 		{ IID_BOULDER, 1, "rock2.tga" },
 		{ IID_BOULDER, 2, "rock3.tga" },
 		{ IID_BOULDER, 3, "rock4.tga" },
+		{ IID_BLOCK, 0, "block.tga" },
 	};
 
 	SoundMapType::value_type sounds[] = {

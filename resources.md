@@ -39,3 +39,8 @@
 * [Log - click here to see my progress](log.md)
 * [FAQ](FAQ.md)
 * [Resources](resources.md)
+
+
+## RESOURCES I FOUND USEFUL
+* [HardDrop](http://harddrop.com/wiki/Tetris_Wiki)
+* [FreeGlut API](http://freeglut.sourceforge.net/docs/api.php)

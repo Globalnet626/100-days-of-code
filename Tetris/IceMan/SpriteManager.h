@@ -64,6 +64,7 @@ public:
 		textureHeight = static_cast<unsigned char>(info[2]) + static_cast<unsigned char>(info[3]) * 256;
 		byteCount = static_cast<unsigned char>(info[4]) / 8;
 		imageSize = textureWidth * textureHeight * byteCount;
+		std::cout << imageSize << " " << filename_tga << std::endl;
 		imageData = new char[imageSize];
 		tgaFile.seekg(18);
 		  // Read image data

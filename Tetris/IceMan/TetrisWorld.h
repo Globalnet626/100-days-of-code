@@ -11,7 +11,8 @@
 class TetrisWorld : public GameWorld
 {
 public:
-	std::shared_ptr<BaseBlock> x;
+	std::shared_ptr<BaseBlock> background[10][20];
+	
 	TetrisWorld(std::string assetDir)
 		: GameWorld(assetDir)
 	{
@@ -19,7 +20,7 @@ public:
 
 	virtual int init()
 	{
-		x = std::make_shared<BaseBlock>(IID_BLOCK, 1, 1, GraphObject::Direction::none, 1.0, 0);
+		populateBackground();
 		return GWSTATUS_CONTINUE_GAME;
 	}
 
@@ -36,8 +37,41 @@ public:
 	virtual void cleanUp()
 	{
 	}
+	int XYLoc(int x)	// each unit is .25 of the actual x/y distance.
+	{
+		if (x == 0)
+		{
+			return 4;
+		}
+		else
+		{
+			int temp = x;
+			temp += 4;
+			return temp;
+		}
+	}
 
 private:
+	bool populateBackground()
+	{
+		for (size_t i = 0; i < 10; i++)
+		{
+			for (size_t z = 0; z < 20; z++)
+			{
+				try
+				{
+
+					background[i][z] = std::make_shared<BaseBlock>(IID_BLOCK,XYLoc(i), XYLoc(z));
+				}
+				catch (const std::exception&)
+				{
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
 };
 
 #endif // TETRISWORLD_H_
