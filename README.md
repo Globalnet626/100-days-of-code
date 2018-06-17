@@ -39,4 +39,4 @@ I recommend that you commit to no more than 2-3 challenges at a time, ideally 2.
 
 
 
-###### Philippians 3:14(NIV) - 14 I press on toward the goal to win the prize for which God has called me heavenward in Christ Jesus.
+###### Philippians 3:14(NIV) - I press on toward the goal to win the prize for which God has called me heavenward in Christ Jesus.
