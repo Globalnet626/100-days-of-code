@@ -12,6 +12,7 @@ class TetrisWorld : public GameWorld
 {
 public:
 	std::shared_ptr<BaseBlock> background[10][20];
+	std::shared_ptr<BaseBlock> gameSpace[10][20];
 	
 	TetrisWorld(std::string assetDir)
 		: GameWorld(assetDir)
@@ -41,12 +42,12 @@ public:
 	{
 		if (x == 0)
 		{
-			return 4;
+			return 0;
 		}
 		else
 		{
-			int temp = x;
-			temp += 4;
+			int temp = x * 3;
+			std::cout << temp << std::endl;
 			return temp;
 		}
 	}
@@ -54,6 +55,9 @@ public:
 private:
 	bool populateBackground()
 	{
+		//background[0][0] = std::make_shared<BaseBlock>(IID_BLOCK, XYLoc(0), XYLoc(0));
+		//background[1][0] = std::make_shared<BaseBlock>(IID_BLOCK, XYLoc(1), XYLoc(0));
+		//background[2][0] = std::make_shared<BaseBlock>(IID_BLOCK, XYLoc(2), XYLoc(0));
 		for (size_t i = 0; i < 10; i++)
 		{
 			for (size_t z = 0; z < 20; z++)
