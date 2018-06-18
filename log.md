@@ -33,7 +33,6 @@ a license agreement and detailing the sources of the various api and skeletons i
 1.) It's right here. I'll spin it off to its own repo sometime in the future.
 
 ### Day 3: June 17, Sunday
-## NOTE: I did make progress at this date but I wasn't able to comit or push to the Git sever however until today, July 17th.
 **Today's Progress**:  Tetromino Primitives
 
 **Thoughts** Starting to flesh out the primitives and the actor objects. This way I am closer to creating the logic required to make a functional tetris game. Today I have accomplished
