@@ -3,34 +3,25 @@
 
 // IDs for the game objects
 
-const int IID_PLAYER			  = 0;
-const int IID_PROTESTER			  = 1;
-const int IID_HARD_CORE_PROTESTER = 2;
-const int IID_WATER_SPURT		   = 3;
-const int IID_BOULDER			   = 4;
-const int IID_BARREL			   = 5;
-const int IID_ICE				   = 6;
-const int IID_GOLD				   = 7;
-const int IID_SONAR				   = 8;
-const int IID_WATER_POOL		   = 9;
-const int IID_BLOCK				   = 11;
-
-// sounds
+const int IID_BLOCK = 0;
+const int IID_ACTIVEBLOCK = 1;
+const int IID_SETBLOCK = 2;
+// sounds 
 
 const int SOUND_THEME					= 0;
-const int SOUND_PROTESTER_GIVE_UP		= 1;
-const int SOUND_PLAYER_GIVE_UP			= 2;
-const int SOUND_PROTESTER_YELL			= 3;
-const int SOUND_PLAYER_SQUIRT			= 4;
-const int SOUND_GOT_GOODIE				= 5;
-const int SOUND_DIG						= 6;
-const int SOUND_FINISHED_LEVEL			= 7;
-const int SOUND_FOUND_OIL				= 8;
-const int SOUND_PROTESTER_ANNOYED		= 9;
-const int SOUND_PLAYER_ANNOYED			= 10;
-const int SOUND_PROTESTER_FOUND_GOLD	= 11;
-const int SOUND_SONAR					= 12;
-const int SOUND_FALLING_ROCK			= 13;
+//const int SOUND_PROTESTER_GIVE_UP		= 1;
+//const int SOUND_PLAYER_GIVE_UP			= 2;
+//const int SOUND_PROTESTER_YELL			= 3;
+//const int SOUND_PLAYER_SQUIRT			= 4;
+//const int SOUND_GOT_GOODIE				= 5;
+//const int SOUND_DIG						= 6;
+//const int SOUND_FINISHED_LEVEL			= 7;
+//const int SOUND_FOUND_OIL				= 8;
+//const int SOUND_PROTESTER_ANNOYED		= 9;
+//const int SOUND_PLAYER_ANNOYED			= 10;
+//const int SOUND_PROTESTER_FOUND_GOLD	= 11;
+//const int SOUND_SONAR					= 12;
+//const int SOUND_FALLING_ROCK			= 13;
 
 const int SOUND_NONE				   = -1;
 

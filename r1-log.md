@@ -18,4 +18,14 @@ Figured out setting scale of sprites and created a function that properly mapped
 sprite manipulation is solid.
 TODO: Figure out how to play music in the background.
 TODO: Refactor some code and start thinking about optimizing the game logic.
+TODO: Check out drawIce() in SpriteManager.H and maybe retool this to save on sprite usage.
+
+### R1D3
+Started work on the primitives and the tetromino blocks.
+Created sprites for the active and the set blocks atm.
+Might consider keeping color like the newer games but for now set blocks will have their own dulled out color.
+TODO: Figure out how to play music in the background.
+TODO: Refactor some code and start thinking about optimizing the game logic.
+TODO: Check out drawIce() in SpriteManager.H and maybe retool this to save on sprite usage.
+
 

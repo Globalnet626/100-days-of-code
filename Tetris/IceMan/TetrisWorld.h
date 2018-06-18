@@ -13,6 +13,7 @@ class TetrisWorld : public GameWorld
 public:
 	std::shared_ptr<BaseBlock> background[10][20];
 	std::shared_ptr<BaseBlock> gameSpace[10][20];
+	std::shared_ptr<Tetromino> activePiece;
 	
 	TetrisWorld(std::string assetDir)
 		: GameWorld(assetDir)
@@ -22,8 +23,10 @@ public:
 	virtual int init()
 	{
 		populateBackground();
+		debug();
 		return GWSTATUS_CONTINUE_GAME;
 	}
+	
 
 	virtual int move()
 	{
@@ -32,13 +35,15 @@ public:
 		/*decLives();
 		return GWSTATUS_PLAYER_DIED;*/
 
+
+
 		return GWSTATUS_CONTINUE_GAME;
 	}
 
 	virtual void cleanUp()
 	{
 	}
-	int XYLoc(int x)	// each unit is .25 of the actual x/y distance.
+	static int XYLoc(int x)	// each unit is .25 of the actual x/y distance.
 	{
 		if (x == 0)
 		{
@@ -53,6 +58,16 @@ public:
 	}
 
 private:
+
+	void debug()
+	{
+		//std::shared_ptr<BaseBlock> testActive = std::make_shared<ActiveBlock>(XYLoc(5), XYLoc(19));
+		/*gameSpace[5][19] = testActive;*/
+	}
+	void updateActive()
+	{
+		
+	}
 	bool populateBackground()
 	{
 		//background[0][0] = std::make_shared<BaseBlock>(IID_BLOCK, XYLoc(0), XYLoc(0));

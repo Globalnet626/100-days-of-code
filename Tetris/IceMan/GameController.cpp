@@ -66,35 +66,14 @@ static void drawScoreAndLives(string);
 void GameController::initDrawersAndSounds()
 {
 	SpriteInfo drawers[] = {
-		{ IID_PLAYER		   , 0, "dig1.tga"},
-		{ IID_PLAYER		   , 1, "dig2.tga"},
-		{ IID_PLAYER		   , 2, "dig3.tga" },
-		{ IID_PLAYER		   , 3, "dig4.tga"},
-		{ IID_PROTESTER, 0, "protester1.tga"},
-		{ IID_PROTESTER, 1, "protester2.tga" },
-		{ IID_PROTESTER, 2, "protester3.tga" },
-		{ IID_HARD_CORE_PROTESTER, 0, "hardcore1.tga" },
-		{ IID_HARD_CORE_PROTESTER, 1, "hardcore2.tga" },
-		{ IID_HARD_CORE_PROTESTER, 2, "hardcore3.tga" },
-		{ IID_HARD_CORE_PROTESTER, 3, "hardcore4.tga" },
-		{ IID_WATER_SPURT, 0, "water1.tga" },
-		{ IID_WATER_SPURT, 1, "water2.tga" },
-		{ IID_WATER_SPURT, 2, "water3.tga" },
-		{ IID_BARREL , 0, "barrel.tga"},
-		{ IID_GOLD, 0, "gold.tga" },
-		{ IID_SONAR, 0, "sonar.tga" },
-		{ IID_WATER_POOL , 0, "waterpool.tga" },
-		{ IID_ICE, 0, "ice.tga" },
-		{ IID_BOULDER, 0, "rock1.tga" },
-		{ IID_BOULDER, 1, "rock2.tga" },
-		{ IID_BOULDER, 2, "rock3.tga" },
-		{ IID_BOULDER, 3, "rock4.tga" },
 		{ IID_BLOCK, 0, "block.tga" },
+		{ IID_SETBLOCK, 0, "setblock.tga"},
+		{ IID_ACTIVEBLOCK, 0, "activeblock.tga"},
 	};
 
 	SoundMapType::value_type sounds[] = {
 		make_pair(SOUND_THEME					, "theme.wav"),
-		make_pair(SOUND_PROTESTER_YELL		   , "goaway.wav"),
+/*		make_pair(SOUND_PROTESTER_YELL		   , "goaway.wav"),
 		make_pair(SOUND_PROTESTER_GIVE_UP		, "giveup.wav"),
 		make_pair(SOUND_PLAYER_GIVE_UP			   , "die.wav"),
 		make_pair(SOUND_GOT_GOODIE			   , "woohoo.wav"),
@@ -105,7 +84,7 @@ void GameController::initDrawersAndSounds()
 		make_pair(SOUND_SONAR				   , "sonar.wav"),
 		make_pair(SOUND_PLAYER_SQUIRT, "squirt.wav"),
 		make_pair(SOUND_DIG,					"digging.wav"),
-		make_pair(SOUND_FALLING_ROCK, "rockslide.wav")
+		make_pair(SOUND_FALLING_ROCK, "rockslide.wav")*/
 	};
 
 	for (int k = 0; k < sizeof(drawers)/sizeof(drawers[0]); k++)
@@ -327,7 +306,7 @@ void GameController::doSomething()
 	}
 }
 
-void GameController::drawIce(double gx, double gy, double gz, double size)
+void GameController::drawIce(double gx, double gy, double gz, double size) //MAKE SPECIAL NOTE OF THIS FUNCTION MIGS
 {
 	glPushMatrix();
 
@@ -407,10 +386,11 @@ void GameController::displayGamePlay()
 				int imageID = cur->getID();
 
 				// the specialized Ice plotting is an optimization to deal with the background Ice, which requires a lot of horsepower to plot
-				if (imageID == IID_ICE)
-					drawIce(gx, gy, gz, cur->getSize());
-				else
-					m_spriteManager.plotSprite(imageID, cur->getAnimationNumber() % m_spriteManager.getNumFrames(imageID), gx, gy, gz, angle, cur->getSize());
+				// The SPRITE for ICE is actually a brick. I was wondering how the skeleton overlayed it into color, and it seems this is the key right here
+			//	if (imageID == IID_BLOCK)
+			//		drawIce(gx, gy, gz, cur->getSize());
+			//	else
+				m_spriteManager.plotSprite(imageID, cur->getAnimationNumber() % m_spriteManager.getNumFrames(imageID), gx, gy, gz, angle, cur->getSize());
 			}
 		}
 	}

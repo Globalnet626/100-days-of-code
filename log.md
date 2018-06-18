@@ -21,13 +21,24 @@ http://harddrop.com/wiki/Gameplay_overview Leaving this here for future referenc
 **Link(s) to work**
 1.) It's right here. I'll spin it off to its own repo sometime in the future.
 
-### Day 1: June 16, Saturday
+### Day 2: June 16, Saturday
 ## NOTE: I did make progress at this date but I wasn't able to comit or push to the Git sever however until today, July 17th.
 **Today's Progress**: Coordinate spacing is now properly mapped to the Tetris Grid. 
 
 **Thoughts** After refactoring some code, I have found out that I was mapping the grid improperly, with this new approach the grid is moving in a more predictable manner.
 With this, we can start working on game logic. Block primitives and a basic game design document detailing proposed implementations are next order of business. As well as setting up
 a license agreement and detailing the sources of the various api and skeletons ive used for this project.
+
+**Link(s) to work**
+1.) It's right here. I'll spin it off to its own repo sometime in the future.
+
+### Day 3: June 17, Sunday
+## NOTE: I did make progress at this date but I wasn't able to comit or push to the Git sever however until today, July 17th.
+**Today's Progress**:  Tetromino Primitives
+
+**Thoughts** Starting to flesh out the primitives and the actor objects. This way I am closer to creating the logic required to make a functional tetris game. Today I have accomplished
+making the active blocks and the set blocks. Soon I shall start doing game logic including moving down, player input. Then afterwards start on rotation system.
+As of now, I am still trying to grasp how I am going to keep track of objects as well as get ready to refactor some code.
 
 **Link(s) to work**
 1.) It's right here. I'll spin it off to its own repo sometime in the future.
